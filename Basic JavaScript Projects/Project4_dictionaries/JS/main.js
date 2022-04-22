@@ -7,7 +7,7 @@ function my_Dictionary() { //define function
         Sound:"Bark!"
     };
 
-    delete Animal.Age;  //delete operator
+    delete Animal.Age;  //delete this property
 
-    document.getElementById("Dictionary").innerHTML = Animal.Sound;
+    document.getElementById("Dictionary").innerHTML = Animal.Age; // function will try to print out the dictionary element that was deleted, because it's deleted will output as undefined //
 }
