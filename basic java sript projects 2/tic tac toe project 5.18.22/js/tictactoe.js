@@ -69,7 +69,7 @@ function computersTurn() {
 //drawWinLine function is called to dra line if condition is met
 function checkWinConditions() {
     // X O, 1, 2 condition
-    if (arrayIncludes('OX', '1X', '2X')) {drawWinLine(50, 100, 558, 100) }
+    if (arrayIncludes('0X', '1X', '2X')) {drawWinLine(50, 100, 558, 100) }
     // X 3, 4, 5 condition
     else if (arrayIncludes('3X', '4X', '5X')) {drawWinLine(50, 304, 558, 304) }
     // X 6, 7, 8 condition
@@ -97,8 +97,9 @@ function checkWinConditions() {
     // O 2, 5, 8 condition
     else if (arrayIncludes('2O', '5O', '8O')) {drawWinLine(508, 50, 508, 558) }
     // O 6, 4, 2 condition
-    else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 50, 100, 558) }
-    // this conditoin checks for tie. if none of the above conditions register and 9 squares are selected the code execued.
+    else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine(100, 100, 520, 520) }
+    // this condition checks for tie. if none of the above conditions register and 9 squares are selected the code execued.
     else if (selectedSquares.length >=9) {
         //this function plays the tie game sound
         audio('./media/bell.mp3');
