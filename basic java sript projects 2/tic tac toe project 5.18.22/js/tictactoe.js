@@ -17,7 +17,7 @@ function placeXOrO(squareNumber) {
             select.style.backgroundImage = 'url("images/pup2.png")';
         } else {
             // if activePlayer is equal to 'O', the o.png is placed in HTML
-            select.style.backgroundImage = 'url("images/kitten.jpg")';
+            select.style.backgroundImage = 'url("images/baby_kitten.png")';
         }
         // squareNumber and activePlayer are concatenated together and added to array
         selectedSquares.push(squareNumber + activePlayer);
@@ -140,15 +140,15 @@ function drawWinLine(coordXl, coordYl, coordX2, coordY2) {
     //this line indicates where the start of a line x axis is
     let xl = coordXl, 
     // this line indicates where the start of a lines y axis is
-    yl = coordXl, 
-    //this line indicates where the end of a lines x axis is
-    x2 = coordX2,
-    //thisline indicates wher the end of a lines x axis is
-    y2 = coordY2,
-    //this variable stores temporary x axis data we update in our animation loop
-    x = xl,
-    //this variable stores temporary y axis data we update in our animation loop
-    y = yl;
+        yl = coordYl, 
+        //this line indicates where the end of a lines x axis is
+        x2 = coordX2,
+        //thisline indicates wher the end of a lines x axis is
+        y2 = coordY2,
+        //this variable stores temporary x axis data we update in our animation loop
+        x = xl,
+        //this variable stores temporary y axis data we update in our animation loop
+        y = yl;
     
     //this function interacts with the canvas
     function animateLineDrawing() {
@@ -168,14 +168,20 @@ function drawWinLine(coordXl, coordYl, coordX2, coordY2) {
         c.strokeStyle = 'rgba(70. 255, 33, .8)';
         // this method draws everything we laid out above
         c.stroke();
-        //this ocnditoin checks if we've reached the endpoint
-        if (xl <= x2 && yl >= y2) {
+        //this condition checks if we've reached the endpoint
+        if (xl <= x2 && yl <= y2) {
             //this condition adds 10 to the previous end x point
             if (x < x2) { x += 10; }
             // this conditon adds 10 to the previous end y point
-            if (y <y2) { y += 10; }
+            if (y < y2) { y += 10; }
             //this condition cancels our animation loop if we've reached the end points
             if (x >= x2 && y >= y2) {cancelAnimationFrame(animationLoop) ; }
+        }
+        
+        if (xl <= x2 && yl >= y2) {
+            if (x < x2) { x += 10; }
+            if (y > y2) { y -= 10; }
+            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
         }
     }
 
