@@ -7,7 +7,7 @@ body {
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+    font-family: 'Roboto', sans-serif; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #1a1a1a; 
@@ -27,8 +27,8 @@ h1:hover {
 
 /* Paragraph elements */
 p {
-    font-family: Arial, Helvetica, sans-serif Bold;
-    text-align: justify; /* Justify text within paragraph elements */
+    font-family: 'Roboto', sans-serif;
+    text-align: left; /* Justify text within paragraph elements */
     letter-spacing: 1px; /* This expands the text slightly */
     font-size: 20px;
     padding-left: 20px; /* Adds padding to the left of the paragraph element */
@@ -122,7 +122,7 @@ footer {
     color: white; /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: Arial, Helvetica, sans-serif Bold; /* This specifies the font family for text on our navbar */
+    font-family: 'Roboto', sans-serif; /* This specifies the font family for text on our navbar */
     font-size: 20px; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
@@ -239,15 +239,14 @@ footer {
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
-    width: 100%; /* Each input box covers the full width of the container */
+    width: 50%; /* Each input box covers the full width of the container */
     padding: 12px; /* Adds padding within the text box */
     border: 1px solid #ccc; /* Setting a solid border and its color */
     border-radius: 4px; /* Slightly rounds the corners of the text box border */
     box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
     margin-top: 6px; /* Adds a margin to the top of the text box */
     margin-bottom: 16px; /* Adds a margin to the bottom of the text box */
-    resize: vertical; /* This allows the user to resize the text boxes vertically */
-    font-family: Arial, Helvetica, sans-serif Bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Hover effects for input boxes */
@@ -257,7 +256,7 @@ input[type=text]:hover {
 
 /* Submit button */
 input[type=submit] {
-    background-color: black; /* Sets the background color of the submit button to black */
+    background-color: #eeeeee; /* Sets the background color of the submit button to black */
     color: white; /* Sets the font color of the Submit button to white */
     font-weight: bold; /* Makes the font of the submit button bold */
     padding: 12px 20px; /* Adds padding to the submit button */
@@ -267,7 +266,7 @@ input[type=submit] {
     display: block; /* Allows the submit button to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this will center the submit button */
     margin-right: auto;
-    font-family: Perpetua, Rockwell Extra Bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Hover effect for submit button */
@@ -283,14 +282,13 @@ form {
     border-radius: 5px; /* Rounds the corners of the contact form */
     background-color: #f2f2f2; 
     padding: 10px; /* Adds padding to the contact form */
-    font-family: "Trebuchet MS", Optima;
+    font-family: 'Roboto', sans-serif;
 }
 /***** END OF CONTACT FORM STYLING *****/
 
 
 /*** slide show ****/
 
-* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
