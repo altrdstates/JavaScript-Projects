@@ -10,7 +10,7 @@ h1 {
     font-family: 'Roboto', sans-serif; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #1a1a1a; 
+    color: #000000; 
 }
 
 /* Heading 1 element hover effect */
@@ -54,7 +54,7 @@ p:hover {
 
 /* Anchor elements */
 a {
-    color: blue; /* This ensures all links are blue */
+    color: #999999ff;  /* This ensures all links are blue */
 }
 
 /* Quotation elements */
